@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+set -o pipefail
+
+REPO_ROOT="$(cd "${GIT_DIR}"/.. && pwd)"
+# TODO: PRECOMMIT_D sould be counfigured
+PRECOMMIT_D="${REPO_ROOT}/scripts/git-hooks/pre-commit.d"
+
+for x in "${PRECOMMIT_D}"/*
+do
+	. "$x"
+done
+
