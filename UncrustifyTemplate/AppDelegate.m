@@ -8,6 +8,12 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate ()<UIApplicationDelegate>
+
+@property (nonatomic) id<UIApplicationDelegate> dummyDelegate;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
